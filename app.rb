@@ -10,5 +10,5 @@ get '/secret' do
 end
 
 get '/chris' do
-  'Chris world!'
+  'Chris\' world!'
 end
