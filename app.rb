@@ -1,5 +1,5 @@
 require 'sinatra'
-set :session_secret, 'super secret'
+# set :session_secret, 'super secret'
 
 get '/' do
   'Hello world!'
@@ -18,8 +18,12 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
+end
+
+get '/form-cat' do
+  erb(:form_cat)
 end
